@@ -1,0 +1,24 @@
+<div class="container">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Documento</th>
+        <th>Custo Mensal</th>
+        <th>Dono</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @animals.each do |animal| %>
+        <tr>
+          <td><%= animal.nome %></td>
+          <td><%= animal.tipo %></td>
+          <td><%= animal.custo_mensal %></td>
+          <td><%= animal.pessoa.nome %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <%#= link_to 'Novo Animal', new_pessoa_animal_path, method: post, class: 'btn btn-primary' %>
+</div>
