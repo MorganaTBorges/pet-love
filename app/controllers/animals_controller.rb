@@ -12,11 +12,20 @@ class AnimalsController < ApplicationController
     @pessoa = Pessoa.find(params[:pessoa_id])
     @animal.pessoa = @pessoa
 
-    if @animal.save!
+    if @pessoa.nome[0] == 'A' && @animal.tipo == 'Gato'
+      redirect_to new_pessoa_animal_path(@pessoa), notice: 'Você não pode ter gatos, selecione outro animal'
+    elsif 
+      @animal.save!
       redirect_to root_path
     else
       render :new
     end
+
+    # if @animal.save!
+    #   redirect_to root_path
+    # else
+    #   render :new
+    # end
   end
 
   def destroy
