@@ -19,6 +19,10 @@
           <td><%= link_to 'Remover', animal_path(animal), method: :delete, data: { confirm: 'Are you sure?'} %></td>
         </tr>
       <% end %>
+      <td><strong>Custo total: </strong><%= Animal.sum(:custo_mensal) %></td>
     </tbody>
+  
   </table>
+      
+
 </div>
