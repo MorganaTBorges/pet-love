@@ -1,4 +1,5 @@
 class AnimalsController < ApplicationController
+  before_action :animal_tipos, only: %i[new create]
 
   def index
     @animals = Animal.all
@@ -23,6 +24,10 @@ class AnimalsController < ApplicationController
 
   def pessoa_params
     params.require(:pessoa).permit(:nome, :documento, :data_de_nascimento)
+  end
+
+  def animal_tipos
+    @tipo = ['cavalo', 'cachorro', 'papagaio', 'lhama', 'iguana', 'ornitorrinco', 'andorinha']
   end
 
 end
