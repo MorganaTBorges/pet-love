@@ -1,0 +1,13 @@
+<div class="container mt-5">
+  <h1>Adicionar um novo animal para <%= @pessoa.nome %></h1>
+  <%= simple_form_for [@pessoa, @animal] do |f| %>
+    <%= f.input :nome %>
+    <% if ((Time.zone.now - @pessoa.data_de_nascimento.to_time) / 1.year.seconds).floor < 18 %>
+      <%= f.input :tipo, collection: @tipo_menores %>
+    <% else %>
+      <%= f.input :tipo, collection: @tipo_maiores %>
+    <% end %>
+    <%= f.input :custo_mensal %>
+    <%= f.submit class: 'btn btn-primary' %>
+  <% end %>
+</div>

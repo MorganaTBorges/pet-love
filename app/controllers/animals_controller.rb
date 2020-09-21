@@ -5,6 +5,7 @@ class AnimalsController < ApplicationController
   def new
     @animal = Animal.new
     @pessoa = Pessoa.find(params[:pessoa_id])
+    @animals = Animal.where(pessoa_id: @pessoa)
   end
 
   def create
@@ -20,12 +21,6 @@ class AnimalsController < ApplicationController
     else
       render :new
     end
-
-    # if @animal.save!
-    #   redirect_to root_path
-    # else
-    #   render :new
-    # end
   end
 
   def destroy
