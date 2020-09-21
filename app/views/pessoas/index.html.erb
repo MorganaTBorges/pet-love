@@ -1,17 +1,18 @@
 <div class="container">
-  <table class="table">
+  <table class="table", style="text-align: center;">
     <thead>
       <tr>
         <th>Dono</th>
-        <th>Idade</th>
-        <th colspan="3"></th>
+        <th>Qnt de Pets</th>
+        <th>Custo total</th>
       </tr>
     </thead>
     <tbody>
       <% @pessoas.each do |pessoa| %>
         <tr>
           <td><%= link_to pessoa.nome, pessoa_path(pessoa) %></td>
-          <td><%= pessoa.data_de_nascimento %></td>
+          <td><%= pessoa.animals.count %></td>
+          <td>R$ <%= pessoa.animals.sum(:custo_mensal) %></td>
           <td><%= link_to 'Adicionar Novo Animal', new_pessoa_animal_path(pessoa), class: 'btn btn-primary' %></td>
         </tr>
       <% end %>

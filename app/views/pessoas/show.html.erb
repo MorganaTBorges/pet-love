@@ -15,14 +15,11 @@
         <tr>
           <td><%= animal.nome %></td>
           <td><%= animal.tipo %></td>
-          <td><%= animal.custo_mensal %></td>
+          <td>R$ <%= animal.custo_mensal %></td>
           <td><%= link_to 'Remover', animal_path(animal), method: :delete, data: { confirm: 'Are you sure?'} %></td>
         </tr>
       <% end %>
-      <td><strong>Custo total: </strong><%= @animals.sum(:custo_mensal) %></td>
+      <td><strong>Custo total: </strong>R$ <%= @animals.sum(:custo_mensal) %></td>
     </tbody>
-  
   </table>
-      
-
 </div>
