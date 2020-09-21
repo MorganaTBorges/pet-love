@@ -1,9 +1,6 @@
 class AnimalsController < ApplicationController
   before_action :animal_tipos, only: %i[new create]
 
-  def index
-    @animals = Animal.all
-  end
   
   def new
     @animal = Animal.new
@@ -11,11 +8,16 @@ class AnimalsController < ApplicationController
   end
 
   def create
-    @pessoa = Pessoa.find(params[:pessoa_id])
     @animal = Animal.new(animal_params)
-    @pessoa.animal = @pessoa
-  end
+    @pessoa = Pessoa.find(params[:pessoa_id])
+    @animal.pessoa = @pessoa
 
+    if @animal.save!
+      redirect_to root_path
+    else
+      render :new
+    end
+  end
 
   private
   def animal_params

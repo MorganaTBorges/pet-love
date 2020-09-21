@@ -1,0 +1,8 @@
+<h3 class="mt-4">Animals</h3>
+<ul>
+  <% @animals.each do |animal| %>
+    <li>
+      <%= animal.tipo %>, <%= animal.nome %>
+    </li>
+  <% end %>
+</ul>
