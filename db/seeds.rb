@@ -8,12 +8,12 @@
 
 
 Pessoa.create(nome: 'Johnny Cash', documento: '555555555', data_de_nascimento: '26-02-1932')
-Pessoa.create(nome: 'Sid Vicious', documento: '555555555', data_de_nascimento: '10 de maio de 1957')
-Pessoa.create(nome: 'Axl Rose', documento: '555555555', data_de_nascimento: '6 de fevereiro de 1962')
-Pessoa.create(nome: 'Joey Ramone', documento: '555555555', data_de_nascimento: '19 de maio de 1951')
-Pessoa.create(nome: 'Bruce Dickinson', documento: '555555555', data_de_nascimento: '7 de agosto de 1958')
-Pessoa.create(nome: 'Kurt Cobain', documento: '555555555', data_de_nascimento: '20 de fevereiro de 1967')
-Pessoa.create(nome: 'Elvis Presley', documento: '555555555', data_de_nascimento: '17 de agosto de 2008')
+Pessoa.create(nome: 'Sid Vicious', documento: '555555555', data_de_nascimento: '10-03-1957')
+Pessoa.create(nome: 'Axl Rose', documento: '555555555', data_de_nascimento: '06-02-1962')
+Pessoa.create(nome: 'Joey Ramone', documento: '555555555', data_de_nascimento: '19-05-1951')
+Pessoa.create(nome: 'Bruce Dickinson', documento: '555555555', data_de_nascimento: '07-08-1958')
+Pessoa.create(nome: 'Kurt Cobain', documento: '555555555', data_de_nascimento: '20-02-1967')
+Pessoa.create(nome: 'Elvis Presley', documento: '555555555', data_de_nascimento: '17-08-2008')
 
 Animal.create(nome: 'Pé de Pano', custo_mensal: '199,99', tipo: 'Cavalo', pessoa_id: '1')
 Animal.create(nome: 'Rex', custo_mensal: '99,99', tipo: 'Cachorro', pessoa_id: '2')

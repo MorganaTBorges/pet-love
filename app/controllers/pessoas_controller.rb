@@ -11,6 +11,7 @@ class PessoasController < ApplicationController
   def show
     @pessoa = Pessoa.find(params[:id])
     @animals = Animal.where(pessoa_id: @pessoa)
+    @idade = ((Time.zone.now - @pessoa.data_de_nascimento.to_time) / 1.year.seconds).floor
   end
 
   private

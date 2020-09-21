@@ -1,7 +1,7 @@
 <div class="container mt-5">
   <h3>Pets de <%= @pessoa.nome %></h3> 
   <p><strong>Data de Nascimento: </strong><%= @pessoa.data_de_nascimento %></p>
-  <p><strong>Idade: </strong><%= ((Time.zone.now - @pessoa.data_de_nascimento.to_time) / 1.year.seconds).floor %></p>
+  <p><strong>Idade: </strong><%= @idade %> anos</p>
   <table class="table">
     <thead>
       <tr>
