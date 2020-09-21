@@ -1,8 +1,20 @@
-<h3 class="mt-4">Animals</h3>
-<ul>
-  <% @animals.each do |animal| %>
-    <li>
-      <%= animal.tipo %>, <%= animal.nome %>
-    </li>
-  <% end %>
-</ul>
+<div class="container">
+  <h3 class="mt-4">Pets de <%= @pessoa.nome %></h3> 
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Nome do Pet</th>
+        <th>Tipo</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @animals.each do |animal| %>
+        <tr>
+          <td><%= animal.nome %></td>
+          <td><%= animal.tipo %></td>
+          <td><%= link_to 'Remover', animal_path(animal), method: :delete, data: { confirm: 'Are you sure?'} %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

@@ -19,6 +19,12 @@ class AnimalsController < ApplicationController
     end
   end
 
+  def destroy
+    @animal = Animal.find(params[:id])
+    @animal.destroy
+    redirect_to root_path
+  end
+
   private
   def animal_params
     params.require(:animal).permit(:nome, :tipo, :custo_mensal)
