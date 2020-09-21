@@ -6,6 +6,9 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+Pessoa.delete_all
+Animal.delete_all
+User.delete_all
 
 Pessoa.create(nome: 'Johnny Cash', documento: '555555555', data_de_nascimento: '26-02-1932')
 Pessoa.create(nome: 'Sid Vicious', documento: '555555555', data_de_nascimento: '10-03-1957')
