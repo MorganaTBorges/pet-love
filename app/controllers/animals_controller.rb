@@ -35,7 +35,8 @@ class AnimalsController < ApplicationController
   end
 
   def animal_tipos
-    @tipo = ['Cavalo', 'Cachorro', 'Papagaio', 'Lhama', 'Iguana', 'Ornitorrinco', 'Andorinha', 'Gato']
+    @tipo_maiores = ['Cavalo', 'Cachorro', 'Papagaio', 'Lhama', 'Iguana', 'Ornitorrinco', 'Andorinha', 'Gato']
+    @tipo_menores = ['Cavalo', 'Cachorro', 'Papagaio', 'Lhama', 'Iguana', 'Ornitorrinco', 'Gato']
   end
 
 end
