@@ -1,7 +1,9 @@
-<h1>Adicionar um novo animal para <%= @pessoa.nome %></h1>
+<div class="container">
+  <h1>Adicionar um novo animal para <%= @pessoa.nome %></h1>
 
-<%= simple_form_for [@pessoa, @animal] do |f| %>
-  <%= f.input :tipo, collection: @tipo %>
-  <%= f.input :nome %>
-  <%= f.submit class: 'btn btn-primary' %>
-<% end %>
+  <%= simple_form_for [@pessoa, @animal] do |f| %>
+    <%= f.input :tipo, collection: @tipo %>
+    <%= f.input :nome %>
+    <%= f.submit class: 'btn btn-primary' %>
+  <% end %>
+</div>

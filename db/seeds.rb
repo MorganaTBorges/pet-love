@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-Pessoa.create(nome: 'Johnny Cash', documento: '555555555', data_de_nascimento: '26 de fevereiro de 1932')
+Pessoa.create(nome: 'Johnny Cash', documento: '555555555', data_de_nascimento: '26-02-1932')
 Pessoa.create(nome: 'Sid Vicious', documento: '555555555', data_de_nascimento: '10 de maio de 1957')
 Pessoa.create(nome: 'Axl Rose', documento: '555555555', data_de_nascimento: '6 de fevereiro de 1962')
 Pessoa.create(nome: 'Joey Ramone', documento: '555555555', data_de_nascimento: '19 de maio de 1951')

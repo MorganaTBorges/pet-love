@@ -1,5 +1,9 @@
 <div class="container">
   <h3 class="mt-4">Pets de <%= @pessoa.nome %></h3> 
+    <h3>Data agora: </h3> <%= Time.zone.now.to_date %> 
+    <h3>Idade: </h3> <%= @pessoa.data_de_nascimento.to_date %> 
+    <h3>Data de Nascimento: </h3> <%= @pessoa.data_de_nascimento %> 
+
   <table class="table">
     <thead>
       <tr>
